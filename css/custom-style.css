@@ -1,0 +1,116 @@
+/* Root Elements */
+:root {
+  --theme-color: #1e41ce;
+  --main-font: "Roboto", sans-serif;
+
+  /* Custom Colors */
+  --grey: #f3f3f3;
+
+  /* Transition */
+  --ease_p2_s: 0.2s ease all;
+  --ease_p5_s: 0.5s ease all;
+
+  /* Border Colors */
+  --border-color-light-black: 1px solid rgb(0 0 0 / 16%);
+
+  /* Widths */
+  --vw-70: 70vw;
+
+  /* Shadow */
+}
+
+/* Custom Properties For Page */
+.thm_bg {
+  background: var(--theme-color);
+}
+.thm_color {
+  color: var(--theme-color);
+}
+.white_bg {
+  background: #fff;
+}
+.white_color {
+  color: #fff;
+}
+
+/* Font Properties */
+.font_uppercase {
+  text-transform: uppercase;
+}
+
+/* Cursors */
+.hand_click_cursor {
+  cursor: pointer;
+}
+.no_txt_decoration {
+  text-decoration: none;
+}
+
+/* Sections */
+.flex {
+  display: flex;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.fl_verti_center {
+  align-items: center;
+}
+.fl_hori_center {
+  justify-content: center;
+}
+.fl_space_between {
+  justify-content: space-between;
+}
+.fl_space_evenly {
+  justify-content: space-evenly;
+}
+.fl_end {
+  justify-content: flex-end;
+}
+.txt_center {
+  text-align: center;
+}
+/* Components */
+.thm-btn {
+  background: #fff;
+  padding: 10px 40px;
+  border: 1px solid #0000004a;
+  transition: var(--ease_p2_s);
+  cursor: pointer;
+}
+.thm-btn:hover {
+  background: #f4f4f4;
+}
+.thm-btn:active {
+  background: #f3f3f3;
+}
+#output_html,
+input {
+  padding: 20px 50px 20px 1rem;
+  border-radius: 5px;
+  background-color: var(--grey);
+  outline: none;
+  border: none;
+  box-shadow: 3px 2px 6px #00000047;
+}
+
+/* Custom Spacing */
+.pd_1_rem {
+  padding: 1rem;
+}
+.pd_right_20px {
+  padding-right: 20px;
+}
+.mg_ud_20 {
+  margin: 20px 0;
+}
+
+.pd_ud_20 {
+  padding: 20px 0;
+}

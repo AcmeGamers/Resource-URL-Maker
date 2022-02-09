@@ -4,30 +4,58 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="riple.css" />
-    <title>Resource URL Maker</title>
+    <title>Resource URL Generator</title>
+    <link rel="stylesheet" href="./css/custom-style.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="https://raw.githubusercontent.com/AcmeGamers/Public-Updates/main/code-files/js/templates/acme-footer.js"></script>
   </head>
-  <body>
-    <div id="section-1">
-      <div>
-        <h1>Resource URL Maker</h1>
-        <a href="#"><button class="btn">Get Started</button></a>
-      </div>
-      <div>
-        <a href="#section-2"
-          ><button class="arrow-key-down circle-btn">---></button></a
+  <body class="thm_bg white_color" style="margin-top: 50px">
+    <div class="column fl_verti_center fl_hori_center">
+      <h1>Resource URL Generator</h1>
+
+      <div class="form-interior white_bg txt_center">
+        <div class="form flex fl_verti_center fl_hori_center">
+          <div class="message left-side">
+            <input type="text" placeholder="Links" id="links" />
+          </div>
+        </div>
+
+        <div
+          id="code_output"
+          class="flex fl_hori_center"
+          style="margin-top: 20px"
         >
+          <p id="output_html" style="overflow-wrap: break-word"></p>
+        </div>
       </div>
     </div>
-    <div id="section-2">
-      <form action="/"></form>
-    </div>
-    <div id="section-3">
-      <div>
-        <h1>Request A new Feature</h1>
-      </div>
-    </div>
-    <script src="riple.js"></script>
+    <define-acme></define-acme>
+
+    <script>
+      // Inputs
+      var links = document.getElementById("links");
+
+      // Outputs
+      var output = document.getElementById("output_html");
+
+      links.oninput = function () {
+        output.innerHTML = encodeURIComponent(links.value);
+      };
+
+      // copy value from input
+      function copy() {
+        var range = document.createRange();
+        var selection = window.getSelection();
+        range.selectNodeContents(output);
+        selection.removeAllRanges();
+        selection.addRange(range);
+      }
+      document.addEventListener("keydown", function (e) {
+        if (e.keyCode == 67 && e.ctrlKey) {
+          copy();
+          console.log(" Copied to clipboard");
+        }
+      });
+    </script>
   </body>
 </html>

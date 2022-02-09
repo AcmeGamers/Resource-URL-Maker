@@ -1,0 +1,41 @@
+body {
+  background: var(--theme-color-depth-v1);
+  color: #fff;
+  font-family: var(--main-font);
+}
+
+.form-interior {
+  padding: 2rem 4rem;
+  width: var(--vw-70);
+}
+.form-interior .form-group {
+  margin-bottom: 1rem;
+}
+
+.form > div > input {
+  width: calc(var(--vw-70) / 1.3);
+  margin: 10px 1rem;
+}
+
+#output_html {
+  text-align: left;
+  width: calc(var(--vw-70) / 1.3);
+  color: #757575;
+  font-size: 14px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: #5c5c5c;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+footer > div > p > a {
+  color: #fff;
+}
