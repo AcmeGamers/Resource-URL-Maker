@@ -1,6 +1,6 @@
 # Resource URL Maker
 Encodes your URL to encode based on input values, converts links and data into Encoded sources.
-https://acmegamers.github.io/Resource-URL-Maker/index.html
+https://acmegamers.github.io/Resource-URL-Maker/
 
 ## Feauters
 - Encodes your URL or anything you put into it
